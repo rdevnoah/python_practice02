@@ -7,6 +7,7 @@ for i in range (0, 100):
     if '3' in s or '6' in s or '9' in s:
         d.update({i: int(s.count('3')) + int(s.count('6')) + int(s.count('9'))})
 
+
 d2 = d.items()
 
 for k, v in d2:
