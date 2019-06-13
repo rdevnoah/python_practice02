@@ -5,11 +5,7 @@ l = s.split('/')
 l.remove('')
 print(l)
 
-directory = '/'
+l2 = s.split(l[len(l)-1])
 
-for n in range(0, len(l)-1):
-    directory += l[n] + '/'
-
-exe = l[len(l)-1]
-print(directory, exe, sep=',')
+print(l2[0], l[len(l)-1], sep=',')
 
