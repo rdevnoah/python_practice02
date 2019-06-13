@@ -12,16 +12,16 @@
 
 import random
 
-mymin, mymax = 1, 100
-
 
 while True:
+    mymin, mymax = 1, 100
     n = random.randrange(mymax) + mymin
     count = 0
 
     print('수를 정하였습니다. 맞추어보세요')
-    print('1-100')
+
     while True:
+        print('{0}-{1}'.format(mymin, mymax))
         count += 1
         print(count, end="")
         k = int(input('>> '))
@@ -29,8 +29,10 @@ while True:
         if k == n:
             break
         elif k > n:
+            mymax = k
             print('더 낮게')
         else:
+            mymin = k
             print('더 높게')
 
     if 'y' != input('다시하시겠습니까? (y/n) > '):
