@@ -4,7 +4,7 @@
 d = {}
 for i in range (0, 100):
     s = str(i)
-    if s.__contains__('3') or s.__contains__('6') or s.__contains__('9'):
+    if '3' in s or '6' in s or '9' in s:
         d.update({i: int(s.count('3')) + int(s.count('6')) + int(s.count('9'))})
 
 d2 = d.items()
